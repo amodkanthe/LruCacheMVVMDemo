@@ -40,9 +40,6 @@ class RandomDogViewModel @Inject constructor(private val apiService: ApiService)
         dogDetail.postValue(Resource.error("Something Went Wrong", null))
     }
 
-    private val exceptionHandlerDB = CoroutineExceptionHandler { _, exception ->
-    }
-
     fun fetchDetails() {
         viewModelScope.launch(exceptionHandler) {
             dogDetail.postValue(Resource.loading(null))
