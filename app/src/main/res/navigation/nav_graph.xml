@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.lrucachemvvmdemo.view.MainFragment"
+        android:label="Random Dog"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_randomDogFragment"
+            app:destination="@id/randomDogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cachedImagesFragment"
+            app:destination="@id/cachedImagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomDogFragment"
+        android:name="com.example.lrucachemvvmdemo.view.RandomDogFragment"
+        android:label="Generate"
+        tools:layout="@layout/fragment_random_dog" />
+    <fragment
+        android:id="@+id/cachedImagesFragment"
+        android:name="com.example.lrucachemvvmdemo.view.CachedImagesFragment"
+        android:label="Generated Dogs"
+        tools:layout="@layout/fragment_cached_images" />
+</navigation>
